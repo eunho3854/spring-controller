@@ -1,0 +1,17 @@
+package com.cos.myiocdi;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+// Component(특별한 용도 없으면), Configuration(설정파일), Service(서비스), Repository, Bean
+// Configuration, Service, Repository, Bean -> Component를 상속 받음
+
+@RestController
+public class Postcontroller {
+	
+	@GetMapping("/")
+	public String home() {
+		Robot r = new Robot();
+		return "home" + r.getName();
+	}
+}

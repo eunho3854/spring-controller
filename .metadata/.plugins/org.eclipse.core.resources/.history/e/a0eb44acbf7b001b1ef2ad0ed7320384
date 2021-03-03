@@ -1,0 +1,16 @@
+package com.cos.myjpa.domain.post;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import lombok.Data;
+
+@Data
+// 실행될 때 테이블을 만들어줌
+@Entity
+public class Post {
+	@Id
+	private Long id;
+	private String title;
+	private String content;
+}
