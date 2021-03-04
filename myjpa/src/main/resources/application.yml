@@ -16,6 +16,11 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl # 스프링 부트 모델로 이름 전략을 바꿈 
     show-sql: true
     open-in-view: true # 몰라도 됨
     
+  jackson:
+    serialization:
+      fail-on-empty-beans: false    
